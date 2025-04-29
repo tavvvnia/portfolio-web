@@ -1,0 +1,126 @@
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y fuente de la página */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Estilos generales para el encabezado */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-family: 'Jacquard 24 Charted', sans-serif;
+  font-size: 4em; /* Aumentamos el tamaño de la fuente */
+  font-weight: normal; /* Sin negrita */
+  color: #800000; /* Granate */
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #800000; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para la galería */
+#galeria {
+  margin-bottom: 40px;
+}
+
+#galeria h2 {
+  text-align: center;
+  font-family: 'Jacquard 24 Charted', sans-serif;
+  font-size: 3.5em; /* Aumentamos el tamaño de los títulos de la galería */
+  font-weight: normal; /* Sin negrita */
+  color: #800000; /* Granate */
+  margin-bottom: 20px;
+}
+
+#galeria .imagenes {
+  display: grid; /* Usamos grid para disposición en dos columnas */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las imágenes */
+  margin: 0 auto;
+  max-width: 1200px; /* Limita el ancho máximo */
+}
+
+#galeria .imagenes a {
+  display: block;
+  height: 60vh; /* Reducimos la altura de las imágenes al 60% de la pantalla */
+}
+
+#galeria .imagenes img {
+  width: 100%;
+  height: 100%; /* Las imágenes ocupan toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin deformarse */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#galeria .imagenes img:hover {
+  transform: scale(1.05); /* Aumenta la imagen al 105% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las secciones "Sobre mí" y "Contacto" */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-family: 'Jacquard 24 Charted', sans-serif;
+  font-size: 2.5em; /* Título un poco más grande */
+  font-weight: normal; /* Sin negrita */
+  color: #800000; /* Granate */
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Estilo del footer */
+footer {
+  text-align: center;
+  font-size: 1em;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* Estilo responsive para dispositivos pequeños */
+@media (max-width: 768px) {
+  #galeria .imagenes img {
+    height: 50vh; /* Las imágenes ocuparán un 50% de la altura de la pantalla en dispositivos medianos */
+  }
+  #galeria .imagenes {
+    grid-template-columns: repeat(1, 1fr); /* En pantallas más pequeñas, solo 1 imagen por fila */
+  }
+}
+
+@media (max-width: 600px) {
+  #galeria .imagenes img {
+    height: 45vh; /* En pantallas más pequeñas, las imágenes ocuparán un 45% de la altura */
+  }
+}
